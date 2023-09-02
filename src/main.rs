@@ -54,7 +54,7 @@ fn main() {
     // Read the file into a Vec<String> buffer
     let mut content = Vec::new();
     for line in read_to_string(args.get(1).unwrap()).unwrap().lines() {
-        content.push(line.to_string());
+        content.push(line.trim().to_string());
     }
 
     // Parse the buffer
